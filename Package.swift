@@ -22,7 +22,9 @@ let package = Package(
         .target(
             name: "MySwiftPackage",
             dependencies: ["Starscream"],
-            path: "Sources" ),
+            path: "Sources",
+            resources: [.process("Resources/Media")]
+        ),
         .testTarget(
             name: "MySwiftPackageTests",
             dependencies: ["MySwiftPackage"]),
